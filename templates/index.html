@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hypertension Prediction</title>
+</head>
+<body>
+
+    <h2>Hypertension Stage Prediction</h2>
+
+    <form action="/predict" method="post">
+
+        Gender:
+        <select name="C">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br><br>
+
+        Age:
+        <select name="Age">
+            <option value="18-34">18-34</option>
+            <option value="35-50">35-50</option>
+            <option value="51-64">51-64</option>
+            <option value="65+">65+</option>
+        </select><br><br>
+
+        History:
+        <select name="History">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        Patient:
+        <select name="Patient">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        Take Medication:
+        <select name="TakeMedication">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        Severity:
+        <select name="Severity">
+            <option value="Mild">Mild</option>
+            <option value="Moderate">Moderate</option>
+            <option value="Severe">Severe</option>
+        </select><br><br>
+
+        Breath Shortness:
+        <select name="BreathShortness">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        Visual Changes:
+        <select name="VisualChanges">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        Nose Bleeding:
+        <select name="NoseBleeding">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        When Diagnosed:
+        <select name="Whendiagnoused">
+            <option value="<1 Year"><1 Year</option>
+            <option value="1-5 Years">1-5 Years</option>
+            <option value="5+ Years">5+ Years</option>
+        </select><br><br>
+
+        Systolic:
+        <select name="Systolic">
+            <option value="111 - 120">111 - 120</option>
+            <option value="121 - 130">121 - 130</option>
+            <option value="131 - 140">131 - 140</option>
+            <option value="141+">141+</option>
+        </select><br><br>
+
+        Diastolic:
+        <select name="Diastolic">
+            <option value="81 - 90">81 - 90</option>
+            <option value="91 - 100">91 - 100</option>
+            <option value="101+">101+</option>
+        </select><br><br>
+
+        Controlled Diet:
+        <select name="ControlledDiet">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <input type="submit" value="Predict">
+
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+
+</body>
+</html>
